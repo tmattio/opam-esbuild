@@ -1,0 +1,24 @@
+opam-version: "2.0"
+synopsis: "esbuild prebuild binaries packaged as an opam package"
+description: """esbuild prebuild binaries packaged as an opam package."""
+maintainer: ["Thibaut Mattio"]
+authors: ["Thibaut Mattio"]
+license: "ISC"
+homepage: "https://github.com/tmattio/opam-esbuild"
+doc: "https://ocaml.org/p/esbuild"
+bug-reports: "https://github.com/tmattio/opam-esbuild/issues"
+build: []
+install: [ 
+  "cp" 
+  "esbuild-linux-arm64" {os = "linux" & arch = "arm64"}
+  "esbuild-linux-x64" {os = "linux" & arch = "x86_64"}
+  "esbuild-macos-arm64" {os = "macos" & arch = "arm64"}
+  "esbuild-macos-x64" {os = "macos" & arch = "x86_64"}
+  "esbuild-windows-x64.exe" {os = "windows" & arch = "x86_64"}
+  "%{bin}%/esbuild"
+]
+available: [
+  ( (os = "linux" & (arch = "x86_64" | arch = "arm64"))
+  | (os = "macos" & (arch = "x86_64" | arch = "arm64"))
+  | (os = "windows" &  arch = "x86_64"))
+]
