@@ -1,0 +1,44 @@
+(install
+ (section bin)
+ (files
+  (bin/esbuild-linux-arm64 as esbuild))
+ (enabled_if
+  (and
+   (= %{architecture} arm64)
+   (= %{system} linux))))
+
+(install
+ (section bin)
+ (files
+  (bin/esbuild-linux-x64 as esbuild))
+ (enabled_if
+  (and
+   (= %{architecture} amd64)
+   (= %{system} linux))))
+
+(install
+ (section bin)
+ (files
+  (bin/esbuild-macos-x64 as esbuild))
+ (enabled_if
+  (and
+   (= %{architecture} amd64)
+   (= %{system} macosx))))
+
+(install
+ (section bin)
+ (files
+  (bin/esbuild-macos-arm64 as esbuild))
+ (enabled_if
+  (and
+   (= %{architecture} arm64)
+   (= %{system} macosx))))
+
+(install
+ (section bin)
+ (files
+  (bin/esbuild-macos-x64 as esbuild))
+ (enabled_if
+  (and
+   (= %{architecture} amd64)
+   (= %{system} windows))))

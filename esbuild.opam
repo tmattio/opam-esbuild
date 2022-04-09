@@ -1,12 +1,13 @@
 opam-version: "2.0"
-synopsis: "esbuild prebuild binaries packaged as an opam package"
-description: """esbuild prebuild binaries packaged as an opam package."""
+synopsis: "Esbuild prebuild command line on opam"
+description: """Esbuild prebuild command line on opam."""
 maintainer: ["Thibaut Mattio"]
 authors: ["Thibaut Mattio"]
 license: "ISC"
 homepage: "https://github.com/tmattio/opam-esbuild"
-doc: "https://ocaml.org/p/esbuild"
+doc: "https://tmattio.github.io/opam-esbuild/"
 bug-reports: "https://github.com/tmattio/opam-esbuild/issues"
+dev-repo: "git+https://github.com/tmattio/opam-esbuild.git"
 build: []
 install: [ 
   "cp" 
