@@ -11,11 +11,11 @@ dev-repo: "git+https://github.com/tmattio/opam-esbuild.git"
 build: []
 install: [ 
   "cp" 
-  "esbuild-linux-arm64" {os = "linux" & arch = "arm64"}
-  "esbuild-linux-x64" {os = "linux" & arch = "x86_64"}
-  "esbuild-macos-arm64" {os = "macos" & arch = "arm64"}
-  "esbuild-macos-x64" {os = "macos" & arch = "x86_64"}
-  "esbuild-windows-x64.exe" {os = "windows" & arch = "x86_64"}
+  "bin/esbuild-linux-arm64" {os = "linux" & arch = "arm64"}
+  "bin/esbuild-linux-x64" {os = "linux" & arch = "x86_64"}
+  "bin/esbuild-macos-arm64" {os = "macos" & arch = "arm64"}
+  "bin/esbuild-macos-x64" {os = "macos" & arch = "x86_64"}
+  "bin/esbuild-windows-x64.exe" {os = "windows" & arch = "x86_64"}
   "%{bin}%/esbuild"
 ]
 available: [
